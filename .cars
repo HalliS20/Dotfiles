@@ -1,0 +1,25 @@
+#!/bin/zsh
+
+function ccar() {
+    local program_name="$1"
+    cmake -S . -B build && cmake --build build && ./build/"$program_name"
+}
+
+function cpcar() {
+    local program_name="$1"
+    g++ -o "$program_name" "$program_name.cpp" -g -Wall -Wextra -pedantic -Werror && ./"$program_name"
+}
+
+
+function ccard() {
+    local program_name="$1"
+    cmake -S . -B build && cmake --build build && ./build/"$program_name"
+    rm -f "./build/$program_name"
+}
+
+function cpcard() {
+    local program_name="$1"
+    g++ -o "$program_name" "$program_name.cpp" -g -Wall -Wextra -pedantic -Werror && ./"$program_name"
+    rm -f "$program_name"
+}
+

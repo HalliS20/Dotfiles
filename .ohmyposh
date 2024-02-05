@@ -1,0 +1,13 @@
+#!/bin/zsh
+
+PS1="\$ "
+
+themes=()
+themes[1]='bubblesline'
+themes[2]='json'
+themes[3]='stelbent.minimal'
+
+themenum=3
+theme=${themes[$themenum]}
+end='.omp.json'
+eval "$(oh-my-posh init zsh --config "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/${theme}${end}")"
