@@ -9,6 +9,8 @@ alias la='lsd -la --group-dirs first --color=auto'
 
 alias pip='pip3'
 alias python='python3'
+alias py='python3'
+
 
 source ~/.files/.cars
 source ~/.files/.ezgit
