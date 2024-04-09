@@ -7,7 +7,8 @@ function ccar() {
 
 function cpcar() {
     local program_name="$1"
-    g++ -std=c++17 -o "$program_name" "$program_name.cpp" -g -Wall -Wextra -pedantic -Werror && ./"$program_name"}
+    g++ -std=c++17 -o "$program_name" "$program_name.cpp" -g -Wall -Wextra -pedantic -Werror && ./"$program_name"
+}
 
 
 
@@ -19,7 +20,7 @@ function ccard() {
 
 function cpcard() {
     local program_name="$1"
-    g++ -std=c++17 -o "$program_name" "$program_name.cpp" -g -Wall -Wextra -pedantic -Werror && ./"$program_name"}
+    g++ -std=c++17 -o "$program_name" "$program_name.cpp" -g -Wall -Wextra -pedantic -Werror && ./"$program_name"
     rm -f "$program_name"
 }
 
