@@ -11,6 +11,9 @@ alias pip='pip3'
 alias python='python3'
 alias py='python3'
 
+
+alias mixfmt='mix format --check-equivalent --check-unused-aliases --check-formatted --check-consistent-line-breaks --check-readability'
+
 source ~/.files/.cars
 source ~/.files/.ezgit
 source ~/.files/.sml
