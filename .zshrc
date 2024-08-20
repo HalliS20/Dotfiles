@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-# source ~/.files/.ohmyzsh
+source ~/.files/.ohmyzsh
 source ~/.files/.bash_aliases
 # source ~/.files/.zinit
 source ~/.files/.ohmyposh
