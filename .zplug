@@ -1,0 +1,55 @@
+#!/bin/zsh
+# Ensure zplug is installed
+if [[ ! -d ~/.zplug ]]; then
+    git clone https://github.com/zplug/zplug ~/.zplug
+    source ~/.zplug/init.zsh && zplug update --self
+fi
+
+# Essential
+source ~/.zplug/init.zsh
+
+# Plugins
+zplug "zsh-users/zsh-syntax-highlighting", defer:2
+
+# Oh-My-Zsh plugins and libs
+zplug "plugins/git", from:oh-my-zsh
+#================================================#
+# # zplug "lib/history", from:oh-my-zsh
+# # zplug "lib/key-bindings", from:oh-my-zsh
+# # zplug "lib/completion", from:oh-my-zsh
+#================================================#
+
+# Install plugins if there are plugins that have not been installed
+if ! zplug check --verbose; then
+    printf "Install? [y/N]: "
+    if read -q; then
+        echo; zplug install
+    fi
+fi
+
+# Load plugins
+zplug load
+
+# Additional configurations
+
+# Use hyphen-insensitive completion
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z-_}={A-Za-z_-}' 'r:|=*' 'l:|=* r:|=*'
+
+# Use caching to make completion faster
+zstyle ':completion::complete:*' use-cache 1
+zstyle ':completion::complete:*' cache-path $ZSH_CACHE_DIR
+
+# History configurations
+HISTFILE=~/.zsh_history
+HISTSIZE=1000000
+SAVEHIST=1000000
+setopt hist_expire_dups_first # delete duplicates first when HISTFILE size exceeds HISTSIZE
+setopt hist_ignore_dups       # ignore duplicated commands history list
+setopt hist_ignore_space      # ignore commands that start with space
+setopt hist_verify            # show command with history expansion to user before running it
+setopt share_history          # share command history data
+
+# Custom key bindings
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+
