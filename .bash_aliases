@@ -1,6 +1,7 @@
 #!/bin/zsh
 
-alias n='nvim'
+
+alias n='~/.files/nvim-Script.sh'
 alias rst='exec zsh'
 alias ls='lsd --group-dirs first --color=auto'
 alias l='lsd --group-dirs first --color=auto -1'
@@ -17,3 +18,6 @@ alias mixfmt='mix format --check-equivalent --check-unused-aliases --check-forma
 source ~/.files/.cars
 source ~/.files/.ezgit
 source ~/.files/.sml
+
+
+
