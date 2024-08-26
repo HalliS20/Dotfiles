@@ -18,6 +18,7 @@ alias mixfmt='mix format --check-equivalent --check-unused-aliases --check-forma
 source ~/.files/.cars
 source ~/.files/.ezgit
 source ~/.files/.sml
+source ~/.files/.tsam
 
 
 

@@ -1,0 +1,3 @@
+#!/bin/zsh
+
+alias opPort="sudo lsof -P -n | grep LISTEN"
