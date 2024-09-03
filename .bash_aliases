@@ -16,10 +16,10 @@ alias py='python3'
 
 alias mixfmt='mix format --check-equivalent --check-unused-aliases --check-formatted --check-consistent-line-breaks --check-readability'
 
-source ~/.files/.cars
-source ~/.files/.ezgit
-source ~/.files/.sml
-source ~/.files/.tsam
+source ~/Dotfiles/.cars
+source ~/Dotfiles/.ezgit
+source ~/Dotfiles/.sml
+source ~/Dotfiles/.tsam
 
 
 
