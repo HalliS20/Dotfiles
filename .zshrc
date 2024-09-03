@@ -1,9 +1,9 @@
 #!/bin/zsh
 
-source ~/.files/.bash_aliases
-source ~/.files/.zplug
-source ~/.files/.ohmyposh
-source ~/.files/.paths
+source ~/Dotfiles/.bash_aliases
+source ~/Dotfiles/.zplug
+source ~/Dotfiles/.ohmyposh
+source ~/Dotfiles/.paths
 
 
 
