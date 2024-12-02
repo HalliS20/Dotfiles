@@ -13,6 +13,7 @@ alias python='python3'
 alias py='python3'
 
 alias todo='~/.todo/todo-cli'
+alias cl='clear'
 
 
 
