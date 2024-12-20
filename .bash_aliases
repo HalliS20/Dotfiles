@@ -1,7 +1,8 @@
 #!/bin/zsh
 
 
-alias n='~/Dotfiles/nvim-Script.sh'
+alias n='source ~/Dotfiles/nvim-script.sh'
+alias sn='source ~/Dotfiles/nvim-sudo.sh'
 alias rst='exec zsh'
 alias ls='lsd --group-dirs first --color=auto'
 alias l='lsd --group-dirs first --color=auto -1'
