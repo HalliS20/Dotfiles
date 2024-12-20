@@ -3,7 +3,7 @@
 source ~/Dotfiles/.bash_aliases
 source ~/Dotfiles/.zplug
 source ~/Dotfiles/.ohmyposh
-source ~/Dotfiles/.paths
+# source ~/Dotfiles/.paths
 
 
 
