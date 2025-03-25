@@ -4,6 +4,7 @@ ALIASES="$HOME/.config/Dotfiles/aliases"
 source "$ALIASES/bash_aliases"
 source "$ALIASES/cars"
 source "$ALIASES/ezgit"
+source "$ALIASES/search"
 source "$ALIASES/nvim/nvim"
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
