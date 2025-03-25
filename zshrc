@@ -7,6 +7,7 @@ PLUGINS="$DOTFILES/plugins"
 source "$ALIASES/bash_aliases"
 source "$ALIASES/cars"
 source "$ALIASES/ezgit"
+source "$ALIASES/nvim/nvim"
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
     source "$ALIASES/macos_aliases"
