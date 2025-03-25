@@ -1,0 +1,5 @@
+#!/bin/zsh
+
+PLUGINS="$DOTFILES/plugins"
+source "$PLUGINS/zplug"
+source "$PLUGINS/ohmyposh"
