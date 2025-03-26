@@ -1,1 +1,3 @@
 #!/bin/zsh
+
+alias rld='yabai --restart-service && sketchybar --reload && skhd --restart-service && brew services restart borders'
