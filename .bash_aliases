@@ -8,6 +8,9 @@ alias l='lsd --group-dirs first --color=auto -1'
 alias ll='lsd -l --group-dirs first --color=auto'
 alias la='lsd -la --group-dirs first --color=auto'
 
+alias rld='yabai --restart-service && sketchybar --reload && skhd --restart-service && brew services restart borders'
+
+
 alias pip='pip3'
 alias python='python3'
 alias py='python3'
