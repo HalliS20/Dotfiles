@@ -1,0 +1,147 @@
+#                                 
+
+format = """
+ $username\
+[](fg:black bg:cyan)\
+$directory\
+[](fg:cyan bg:green)\
+$git_branch\
+$git_status\
+$fill\
+$time\
+$all\
+$character
+"""
+
+[fill]
+symbol = " "
+style = "bg:black"
+
+[username]
+show_always = true
+style_user = "fg:white bg:black"
+style_root = "fg:#ffffff bg:#0969da"
+format = '[ $user ]($style)'
+disabled = false
+
+[directory]
+style = "fg:black bg:cyan"
+format = "[ $path ]($style)"
+disabled = false
+
+[directory.substitutions]
+"Documents" = " "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+
+
+[git_status]
+format = '[ $all_status$ahead_behind]($style)'
+style = "fg:black bg:green"
+conflicted = "[ ✖$count ](fg:black bg:red)[](fg:red bg:black)"
+deleted = "[ ✘$count ](fg:black bg:red)[](fg:red bg:black)"
+diverged = "[ ⇕$count ](fg:black bg:red)[](fg:red bg:black)"
+ahead = "[ ⇡$count ](fg:black bg:#ff8800)[](fg:#ff8800 bg:black)"
+behind = "[ ⇣$count ](fg:black bg:#ff8800)[](fg:#ff8800: bg:black)"
+untracked = "[ ~$count ](fg:black bg:#ff8800)[](fg:#ff8800 bg:black)"
+modified = "[ !$count ](fg:black bg:#ff8800)[](fg:#ff8800 bg:black)"
+stashed = "[ $$count ](fg:black bg:cyan)[](fg:cyan bg:black)"
+renamed = "[ »$count ](fg:black bg:cyan)[](fg:cyan bg:black)"
+staged = "[ +$count ](fg:black bg:green)[](fg:green bg:black)"
+disabled = false
+
+
+
+[git_branch]
+symbol = ""
+style = "fg:black bg:green"
+format = '[ $symbol $branch ]($style)'
+disabled = false
+
+# Start languages and tools #
+
+[c]
+symbol = ""
+style = "fg:#840a2c"
+format = '[ $symbol ($version) ]($style)'
+disabled = false
+
+[kubernetes]
+style = "fg:#326ce5"
+format = '[ on ﴱ ($user on )($cluster in )$context \($namespace\) ]($style)'
+disabled = false
+
+[gcloud]
+symbol = " "
+style = "fg:#0f9d58"
+format = '[ on $symbol $account(@$domain)(\($region\)) ]($style) '
+# format = '[ on $symbol account@company.iam.gserviceaccount.com(\($region\)) ]($style) ' # for testing purposes
+disabled = false
+
+[golang]
+symbol = ""
+style = "fg:#007d9c"
+format = '[ $symbol ($version) ]($style)'
+disabled = false
+
+[java]
+symbol = ""
+style = "fg:#007396"
+format = '[ $symbol ($version) ]($style)'
+disabled = false
+
+[lua]
+symbol = ""
+style = "fg:#000080"
+format = '[ $symbol ($version) ]($style)'
+disabled = false
+
+[nodejs]
+symbol = ""
+style = "fg:#5fa04e"
+format = '[ $symbol ($version) ]($style)'
+disabled = false
+
+[package]
+symbol = ""
+style = "fg:#cb3837"
+format = '[ $symbol ($version) ]($style)'
+disabled = false
+
+[php]
+symbol = ''
+style = "fg:#4F5B93"
+format = '[ $symbol ($version) ]($style)'
+disabled = false
+
+[python]
+symbol = ''
+style = "fg:#ffdf76"
+format = '[ $symbol ($version) ]($style)'
+disabled = false
+
+[rust]
+symbol = ""
+style = "fg:#a72145"
+format = '[ $symbol ($version) ]($style)'
+disabled = false
+
+# End languages and tools #
+
+[time]
+disabled = false
+time_format = "%R" # Hour:Minute Format
+style = "fg:cyan"
+format = '[  $time ]($style)'
+
+[cmd_duration]
+style = "fg:#000000 bg:yellow"
+format = "[ took $duration ]($style)"
+
+[character]
+format = "  $symbol "
+success_symbol = "[❯](green)"
+error_symbol = "[❯](red)"
+vimcmd_symbol = "[❮](green)"
+disabled = false

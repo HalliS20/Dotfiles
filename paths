@@ -1,8 +1,8 @@
 #!/bin/zsh
 
+# eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
 
 export PATH=/../usr/local/smlnj/bin:$PATH
-# echo -e "\n. $(brew --prefix asdf)/libexec/asdf.sh" >> ${ZDOTDIR:-~}/.zshrc
-
 export PATH=$PATH:$(go env GOPATH)/bin
+export STARSHIP_CONFIG=$HOME/.config/Dotfiles/plugins/starship/starship.toml
