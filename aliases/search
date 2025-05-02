@@ -1,24 +1,24 @@
 #!/bin/zsh
 
 search() {
-    if [ $# -eq 0 ]; then
-        echo "Usage: search <search term>"
-        return 1
-    fi
+	if [ $# -eq 0 ]; then
+		echo "Usage: search <search term>"
+		return 1
+	fi
 
-    query="$*"
-    # Format the ripgrep output for better readability
-    selected=$(rg "$query" --line-number --color=always |
-        fzf --ansi \
-            --delimiter : \
-            --preview "bat --style=numbers --color=always --highlight-line {2} {1}" \
-            --preview-window=right:60% \
-            --bind 'ctrl-/:change-preview-window(down|hidden|)' \
-            --layout=reverse)
+	query="$*"
+	# Format the ripgrep output for better readability
+	selected=$(rg "$query" --line-number --color=always |
+		fzf --ansi \
+			--delimiter : \
+			--preview "bat --style=numbers --color=always --highlight-line {2} {1}" \
+			--preview-window=right:60% \
+			--bind 'ctrl-/:change-preview-window(down|hidden|)' \
+			--layout=reverse)
 
-    if [ -n "$selected" ]; then
-        file=$(echo "$selected" | cut -d':' -f1)
-        line=$(echo "$selected" | cut -d':' -f2)
-        nvim "$file" +"$line"
-    fi
+	if [ -n "$selected" ]; then
+		file=$(echo "$selected" | cut -d':' -f1)
+		line=$(echo "$selected" | cut -d':' -f2)
+		nvim "$file" +"$line"
+	fi
 }

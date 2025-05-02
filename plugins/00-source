@@ -2,4 +2,4 @@
 
 PLUGINS="$DOTFILES/plugins"
 source "$PLUGINS/zplug"
-source "$PLUGINS/ohmyposh"
+# source "$PLUGINS/ohmyposh"
