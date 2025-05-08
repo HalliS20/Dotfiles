@@ -18,12 +18,12 @@ $character
 
 [fill]
 symbol = " "
-style = "bg:black"
+style = " fg:black"
 
 [username]
 show_always = true
-style_user = "fg:white bg:black"
-style_root = "fg:white bg:blue"
+style_user = "fg:white"
+style_root = "fg:white"
 format = '[ $user ]($style)[](fg:black bg:cyan)'
 disabled = false
 
